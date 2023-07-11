@@ -64,11 +64,11 @@ function App() {
             path="/register"
             element={<Register onLogin={handleLogin} />}
           />
+          <Route path="/products" element={<ProductListing />} />
 
           {/* Protected Routes */}
           {authenticated ? (
             <>
-              <Route path="/products" element={<ProductListing />} />
               <Route path="/orders" element={<OrderList />} />
               <Route path="/create-order" element={<OrderForm />} />
               <Route path="/orders/:id/edit" element={<OrderEditForm />} />
